@@ -1,0 +1,30 @@
+# Ignore bundler config
+/.bundle
+/vendor/bundle/
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore simplecov test coverage output
+coverage
+rails_best_practices_output.html
+
+# Ignore VCR cassettes
+spec/fixtures/vcr_cassettes/*.yml
+features/fixtures/cassettes
+
+reports
+
+# Ignore development "cdn"
+public/cdn
+
+dump.rdb
+
+.DS_Store
+
+# Ignore application configuration
+/config/application.yml

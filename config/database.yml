@@ -1,0 +1,19 @@
+default: &default
+  adapter: 'postgresql'
+  encoding: 'unicode'
+  pool: 15
+
+development:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+
+test: &test
+  <<: *default
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+  database: <%= ENV['DATABASE_TEST'] || 'lds_temple_quiz_test' %>
+  username: <%= ENV['DATABASE_USERNAME'] || '' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || '' %>
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>

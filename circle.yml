@@ -1,0 +1,14 @@
+machine:
+  environment:
+    APP_SECRET: "a1649a66ee2b1234ecd8d28b6ee886fd28362da4c73c5715b24ad72720d77142f6b6cdf5dd617501dc6f06a00f2c5fafb"
+    DATABASE_TEST: 'restful_sprint'
+    DATABASE_HOST: 'localhost'
+    DATABASE_USERNAME: 'root'
+    DATABASE_PASSWORD: ''
+
+test:
+  post:
+    - bundle exec brakeman -z
+    - bundle exec rubocop
+    - bundle exec rails_best_practices .
+    - bundle exec rake teaspoon

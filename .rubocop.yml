@@ -1,0 +1,48 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+Lint/UnderscorePrefixedVariableName:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/ClassLength:
+  Max: 600
+
+Metrics/CyclomaticComplexity:
+  Max: 25
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 40
+
+Metrics/ModuleLength:
+  Max: 500
+
+Metrics/PerceivedComplexity:
+  Max: 25
